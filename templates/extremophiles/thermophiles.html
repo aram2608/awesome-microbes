@@ -1,5 +1,130 @@
 {% extends 'base.html' %}
 
+{% block styles %}
+<style>
+    .thermophile-grid {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .thermophile-card {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        padding: 0;
+        overflow: hidden;
+        transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .thermophile-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 36px color-mix(in srgb, var(--text) 18%, transparent);
+    }
+
+    .thermophile-media {
+        margin: 0;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 70%, #ffb347 30%), var(--accent));
+    }
+
+    .thermophile-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .thermophile-placeholder {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: color-mix(in srgb, var(--text) 82%, #ffffff 18%);
+        background: linear-gradient(135deg, color-mix(in srgb, var(--accent-soft) 75%, var(--surface) 25%), color-mix(in srgb, var(--accent) 35%, var(--surface-elevated) 65%));
+    }
+
+    .thermophile-content {
+        display: grid;
+        gap: 0.75rem;
+        padding: 1rem 1rem 1.25rem;
+    }
+
+    .thermophile-card h2 {
+        margin: 0 0 0.2rem;
+        font-size: 1.15rem;
+        line-height: 1.35;
+    }
+
+    .thermophile-card p {
+        margin: 0;
+        color: var(--text-muted);
+        line-height: 1.6;
+        text-wrap: pretty;
+    }
+
+    .thermophile-card a {
+        color: var(--accent);
+        font-weight: 600;
+        text-underline-offset: 0.2em;
+    }
+
+    .thermophile-card a:hover {
+        color: var(--accent-strong);
+    }
+
+    @media (max-width: 640px) {
+        .thermophile-content {
+            padding: 0.9rem;
+        }
+    }
+</style>
+{% endblock %}
+
 {% block content %}
-    <a href="{{ url_for('extremophiles') }}">Implement me</p>
+    <section class="page-intro">
+        <p class="eyebrow">Heat Adaptation</p>
+        <h1 class="main-heading">Thermophiles</h1>
+        <p class="lead">Organisms adapted to high temperatures, from geothermal pools to deep-sea vents.</p>
+    </section>
+
+    <section class="card-grid thermophile-grid" aria-label="Thermophile cards">
+        <article class="card thermophile-card">
+            <figure class="thermophile-media">
+                <img src="{{ url_for('media', path='Pyrococcus_furiosus.png') }}" alt="Cartoon of Pyrococcus furiosus" loading="lazy" decoding="async">
+            </figure>
+            <div class="thermophile-content">
+                <h2><i>Pyrococcus furiosus</i>: The angry ball of fire that pioneered the field of thermophile research.</h2>
+                <p>
+                    <i>Pyrococcus furiosus</i> was first discovered in 1986 by <a href="https://link.springer.com/article/10.1007/bf00413027">Stetter and Co</a>
+                    when archaea were still referred to as archaebacteria. It was described as "furious" for its fast growth rate and aggressive motility.
+                    Unlike the typical thermophile, these archaea are capable of utilizing starches to grow and are strict anaerobic heterotrophs.
+                    <i>Pyrococcus furiosus</i> continued to break trends with its strange <a href="https://link.springer.com/article/10.1007/s00792-020-01172-2">glycolytic pathway</a>.
+                    Most notable, however, is the archaea's unique DNA polymerase and its applications in PCR reactions, having a higher fidelity than the other common polymerase, <i>Taq</i>.
+                </p>
+            </div>
+        </article>
+
+        <article class="card thermophile-card">
+            <figure class="thermophile-media">
+                <div class="thermophile-placeholder">TODO</div>
+            </figure>
+            <div class="thermophile-content">
+                <h2><i>Geobacillus stearothermophilus</i>: The heat-proof benchmark for sterilization.</h2>
+                <p></p>
+            </div>
+        </article>
+
+        <article class="card thermophile-card">
+            <figure class="thermophile-media">
+                <div class="thermophile-placeholder">TODO</div>
+            </figure>
+            <div class="thermophile-content">
+                <h2><i>Sulfolobus solfataricus</i>: The archaea that shrugs off heat and radiation.</h2>
+                <p></p>
+            </div>
+        </article>
+
+    </section>
 {% endblock %}

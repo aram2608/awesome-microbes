@@ -15,6 +15,7 @@ app.include_router(extremophiles.router)
 app.include_router(symbionts.router)
 app.include_router(parasites.router)
 
+
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
 @app.get("/home", response_class=HTMLResponse, include_in_schema=False)
 def home(request: Request):
