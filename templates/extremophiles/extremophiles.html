@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Extremophiles{% endblock %}
+
+{% block content %}
+<section class="page-intro">
+    <p class="eyebrow">Adaptation at the Edge</p>
+    <h1 class="main-heading">Extremophiles</h1>
+    <p class="lead">These microbes thrive under intense heat, acidity, radiation, pressure, and salinity.</p>
+</section>
+
+<section class="card-grid">
+    <article class="card">
+        <h2>Thermophiles</h2>
+        <p>Heat-loving organisms found in hot springs and hydrothermal vents.</p>
+        <a class="text-link card-link" href="{{ url_for('thermophiles') }}">Learn More</a>
+    </article>
+    <article class="card">
+        <h2>Halophiles</h2>
+        <p>Salt-adapted microbes that survive in hypersaline lakes and flats.</p>
+        <a class="text-link card-link" href="{{ url_for('halophiles') }}">Learn More</a>
+    </article>
+    <article class="card">
+        <h2>Acidophiles</h2>
+        <p>Species that remain active in highly acidic environments with low pH.</p>
+        <a class="text-link card-link" href="{{ url_for('acidophiles') }}">Learn More</a>
+    </article>
+</section>
+
+<section class="card-grid">
+    <article class="card">
+        <h2>Piezophiles</h2>
+        <p>Species that thrive at high pressures.</p>
+        <a class="text-link card-link" href="{{ url_for('piezophiles') }}">Learn More</a>
+    </article>
+    <article class="card">
+        <h2>Radioresistant</h2>
+        <p>Microbes that can handle large doses of radiation.</p>
+        <a class="text-link card-link" href="{{ url_for('radioresistant') }}">Learn More</a>
+    </article>
+    <article class="card">
+        <h2>Snottites</h2>
+        <p>A unique form of acidophilic bacteria that form acidic biofilms.</p>
+        <a class="text-link card-link" href="{{ url_for('snottites') }}">Learn More</a>
+    </article>
+</section>
+{% endblock %}

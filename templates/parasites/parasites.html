@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Parasites{% endblock %}
+
+{% block content %}
+<section class="page-intro">
+    <p class="eyebrow">Host and Invader</p>
+    <h1 class="main-heading">Parasites</h1>
+    <p class="lead">Parasitic microbes use host resources, influencing health, ecology, and evolutionary pressures.</p>
+</section>
+
+<section class="card-grid">
+    <article class="card">
+        <h2>Transmission</h2>
+        <p>Spread through contact, vectors, water, and food depending on the life cycle.</p>
+        <a class="text-link card-link" href="{{ url_for('transmission') }}">Learn More</a>
+    </article>
+    <article class="card">
+        <h2>Host Defense</h2>
+        <p>Immune responses shape which parasites persist and how disease progresses.</p>
+        <a class="text-link card-link" href="{{ url_for('host_defense') }}">Learn More</a>
+    </article>
+    <article class="card">
+        <h2>Evolutionary Arms Race</h2>
+        <p>Hosts and parasites co-evolve as each adapts to the other's strategies.</p>
+        <a class="text-link card-link" href="{{ url_for('arms_race') }}">Learn More</a>
+    </article>
+</section>
+{% endblock %}

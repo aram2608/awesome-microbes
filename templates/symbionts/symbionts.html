@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Symbionts{% endblock %}
+
+{% block content %}
+<section class="page-intro">
+    <p class="eyebrow">Life Together</p>
+    <h1 class="main-heading">Symbionts</h1>
+    <p class="lead">Symbiotic microbes form relationships that can be mutualistic, commensal, or context-dependent.</p>
+</section>
+
+<section class="card-grid">
+    <article class="card">
+        <h2>Gut Microbiota</h2>
+        <p>Complex communities that support digestion, metabolism, and immune function.</p>
+        <a class="text-link card-link" href="{{ url_for('gut') }}">Learn More</a>
+    </article>
+    <article class="card">
+        <h2>Plant Partners</h2>
+        <p>Root-associated microbes help plants acquire nutrients and resist stress.</p>
+        <a class="text-link card-link" href="{{ url_for('plants') }}">Learn More</a>
+    </article>
+    <article class="card">
+        <h2>Marine Symbionts</h2>
+        <p>Microorganisms that fuel coral reefs and ocean food webs through nutrient exchange.</p>
+        <a class="text-link card-link" href="{{ url_for('marine') }}">Learn More</a>
+    </article>
+</section>
+{% endblock %}

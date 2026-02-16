@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Awesome Microbes{% endblock %}
+
+{% block content %}
+<section class="page-intro">
+    <p class="eyebrow">Explore Microbial Worlds</p>
+    <h1 class="main-heading">Tiny rulers of the universe</h1>
+    <p class="lead">
+        From boiling vents to living hosts, microbes adapt to nearly every niche.
+        Browse each section to learn how they survive, cooperate, and compete.
+    </p>
+</section>
+
+<section class="card-grid" aria-label="Microbe categories">
+    <article class="card">
+        <h2>Extremophiles</h2>
+        <p>Specialists that thrive in environments once thought impossible for life.</p>
+        <a class="text-link" href="{{ url_for('extremophiles') }}">Discover extremophiles</a>
+    </article>
+
+    <article class="card">
+        <h2>Symbionts</h2>
+        <p>Partners in biological alliances that support hosts and ecosystems.</p>
+        <a class="text-link" href="{{ url_for('symbionts') }}">Explore symbiotic microbes</a>
+    </article>
+
+    <article class="card">
+        <h2>Parasites</h2>
+        <p>Organisms that benefit from hosts while shaping disease and evolution.</p>
+        <a class="text-link" href="{{ url_for('parasites') }}">Study parasitic microbes</a>
+    </article>
+</section>
+{% endblock %}
