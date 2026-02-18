@@ -21,11 +21,11 @@ if (toggleButton) {
 }
 
 function updateButtonText(currentTheme) {
-    const newCta = currentTheme === 'dark' ? 'Light mode' : 'Dark mode';
-    const icon = currentTheme === 'dark' ? 'Sun' : 'Moon';
+    const newCta = currentTheme === 'dark' ? 'light mode' : 'dark mode';
+    const buttonText = `Switch to ${newCta}`;
 
-    toggleButton.innerText = `${icon} - ${newCta}`;
-    toggleButton.setAttribute('aria-label', `Switch to ${newCta}`);
+    toggleButton.innerText = buttonText;
+    toggleButton.setAttribute('aria-label', buttonText);
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {

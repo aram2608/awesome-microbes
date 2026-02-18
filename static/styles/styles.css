@@ -119,6 +119,7 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: var(--space-2);
   margin: 0;
   padding: 0;
@@ -279,5 +280,9 @@ body {
   .page-link {
     min-height: 2.2rem;
     padding-inline: 0.85rem;
+  }
+
+  .nav-dropdown {
+    min-width: auto;
   }
 }

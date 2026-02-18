@@ -9,6 +9,7 @@
     .thermophile-card {
         display: grid;
         grid-template-rows: auto 1fr;
+        height: 100%;
         padding: 0;
         overflow: hidden;
         transition: transform 180ms ease, box-shadow 180ms ease;
@@ -47,6 +48,7 @@
 
     .thermophile-content {
         display: grid;
+        align-content: start;
         gap: 0.75rem;
         padding: 1rem 1rem 1.25rem;
     }
@@ -95,24 +97,34 @@
                 <img src="{{ url_for('media', path='Pyrococcus_furiosus.png') }}" alt="Cartoon of Pyrococcus furiosus" loading="lazy" decoding="async">
             </figure>
             <div class="thermophile-content">
-                <h2><i>Pyrococcus furiosus</i>: The angry ball of fire that pioneered the field of thermophile research.</h2>
+                <h2><i>Pyrococcus furiosus</i>: A fast-growing model for life at extreme heat.</h2>
                 <p>
-                    <i>Pyrococcus furiosus</i> was first discovered in 1986 by <a href="https://link.springer.com/article/10.1007/bf00413027">Stetter and Co</a>
-                    when archaea were still referred to as archaebacteria. It was described as "furious" for its fast growth rate and aggressive motility.
-                    Unlike the typical thermophile, these archaea are capable of utilizing starches to grow and are strict anaerobic heterotrophs.
-                    <i>Pyrococcus furiosus</i> continued to break trends with its strange <a href="https://link.springer.com/article/10.1007/s00792-020-01172-2">glycolytic pathway</a>.
-                    Most notable, however, is the archaea's unique DNA polymerase and its applications in PCR reactions, having a higher fidelity than the other common polymerase, <i>Taq</i>.
+                    <i>Pyrococcus furiosus</i> was discovered in 1986 by
+                    <a href="https://link.springer.com/article/10.1007/bf00413027">Stetter and colleagues</a>,
+                    when archaea were often called archaebacteria. The name "furiosus" refers to its rapid movement and growth.
+                    Unlike many thermophiles, it can use starch as a food source and grows only in oxygen-free conditions.
+                    It also has an unusual <a href="https://link.springer.com/article/10.1007/s00792-020-01172-2">glycolytic pathway</a>.
+                    Its best-known contribution is the high-fidelity Pfu DNA polymerase, widely used in PCR because it makes fewer errors than <i>Taq</i> polymerase.
                 </p>
             </div>
         </article>
 
         <article class="card thermophile-card">
             <figure class="thermophile-media">
-                <div class="thermophile-placeholder">TODO</div>
+                <img src="{{ url_for('media', path='geobacillus.jpg') }}" alt="Plate of Geobacillus stearothermophilus" loading="lazy" decoding="async">
             </figure>
             <div class="thermophile-content">
-                <h2><i>Geobacillus stearothermophilus</i>: The heat-proof benchmark for sterilization.</h2>
-                <p></p>
+                <h2><i>Geobacillus stearothermophilus</i>: A heat-tolerant benchmark for sterilization.</h2>
+                <p>
+                    <i>Geobacillus stearothermophilus</i> is a heat-loving, spore-forming bacterium with a complex taxonomic history.
+                    It was first grouped under <i>Bacillus</i>, but work by
+                    <a href="https://www.microbiologyresearch.org/content/journal/ijsem/10.1099/00207713-51-2-433">Nazina and colleagues</a>
+                    helped define the separate <i>Geobacillus</i> genus.
+                    <a href="https://link.springer.com/article/10.1186/s12866-017-1047-x">Recent studies</a> suggest this group may still be split further,
+                    showing how difficult microbial classification can be.
+                    Beyond taxonomy, it is important in the <a href="https://www.sciencedirect.com/science/article/pii/S0963996924015886">food industry</a> because its hardy spores can survive processing and contaminate products.
+                    For the same reason, its spores are widely used as biological indicators to confirm whether sterilization methods are effective.
+                </p>
             </div>
         </article>
 

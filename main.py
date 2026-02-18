@@ -20,3 +20,7 @@ app.include_router(parasites.router)
 @app.get("/home", response_class=HTMLResponse, include_in_schema=False)
 def home(request: Request):
     return templates.TemplateResponse(request, "home.html")
+
+@app.get("/sources", response_class=HTMLResponse)
+def sources(request: Request):
+    return templates.TemplateResponse(request, "sources.html")
