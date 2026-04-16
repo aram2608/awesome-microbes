@@ -393,13 +393,6 @@ const allQuestions = [
   },
   {
     category: "parasites",
-    q: "<i>Plasmodium falciparum</i> completes part of its life cycle in <i>Anopheles</i> mosquitoes and part in human hosts. Which stage is infectious to humans?",
-    options: ["Merozoites", "Gametocytes", "Sporozoites", "Trophozoites"],
-    answer: 2,
-    explain: "Sporozoites are the stage injected into the human bloodstream during a mosquito bite. They travel to the liver for initial replication before entering red blood cells as merozoites. Gametocytes are the stage taken up by the mosquito to continue the cycle."
-  },
-  {
-    category: "parasites",
     q: "<i>Bdellovibrio bacteriovorus</i> is unusual among bacteria because it:",
     options: [
       "Survives without any carbon source by fixing CO₂ chemolithotropically.",
@@ -409,7 +402,43 @@ const allQuestions = [
     ],
     answer: 1,
     explain: "<i>Bdellovibrio bacteriovorus</i> is a predatory bacterium that attaches to gram-negative prey, bores through the outer membrane, and replicates inside the periplasmic space, ultimately lysing the host cell to release new predatory cells."
-  }
+  },
+  {
+    category: "parasites",
+    q: "Some parasites do not have effective treatments. Which method of infection control is the preferred in these cases?",
+    options: [
+        "Chemotherapy for infected individuals.",
+        "Interrupting the transmission chain through vector control, water treatment, and quarantine.",
+        "Strong dose of antibiotics.",
+        "Rest and relaxation for the general population."
+        ],
+    answer: 2,
+    explain: "Interrupting the chain of transmission helps prevent the spread of disease in cases where treatments are ineffective or non-existent."
+    },
+    {
+    category: "parasites",
+    q: "CRISPR is a special adaptive immunity employed by bacterial species. Which element is introduced into the bacterial genome to \"remember\" previous infections",
+    options: [
+        "Prophage.",
+        "Transposon.",
+        "Spacer.",
+        "IgE."
+        ],
+    answer: 3,
+    explain: "A spacer is introduced and when the bacteria is reinfected, it is transcribed into a guide RNA for the Cas enzyme",
+    },
+    {
+    category: "parasites",
+    q: "Which microbe was responsible for the Irish Potato famine?",
+    options: [
+      "<i>Phytophthora infestans</i>.",
+      "<i>Frankia</i>.",
+      "<i>Ralstonia solanacearum</i>.",
+      "<i>Ralstonia solanacearum</i>.",
+    ],
+    answer: 1,
+    explain: "Let us never forget: An Gorta Mór",
+    },
 ];
 
 const categoryLabels = {
@@ -515,10 +544,10 @@ function nextQ() { current++; render(); }
 function renderResults(area) {
   const pct = Math.round((score / activeQuestions.length) * 100);
   const verdicts = [
-    [90, "Outstanding — you know your microbes inside and out."],
+    [90, "Outstanding. You know your microbes inside and out."],
     [70, "Solid grasp of the material. A few details are worth revisiting."],
     [50, "You have the broad picture, but some specifics slipped by."],
-    [0,  "Worth another pass through the content — microbes are tricky!"]
+    [0,  "Worth another pass through the content."]
   ];
   const verdict = verdicts.find(([min]) => pct >= min)[1];
 
