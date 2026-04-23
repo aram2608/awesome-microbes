@@ -10,20 +10,30 @@
 </section>
 
 <section class="card-grid">
-    <article class="card">
-        <h2>Gut Microbiota</h2>
-        <p>Complex communities that support digestion, metabolism, and immune function.</p>
-        <a class="text-link card-link" href="{{ url_for('gut') }}">Learn More</a>
-    </article>
-    <article class="card">
-        <h2>Plant Partners</h2>
-        <p>Root-associated microbes help plants acquire nutrients and resist stress.</p>
-        <a class="text-link card-link" href="{{ url_for('plants') }}">Learn More</a>
-    </article>
-    <article class="card">
-        <h2>Marine Symbionts</h2>
-        <p>Microorganisms that fuel coral reefs and ocean food webs through nutrient exchange.</p>
-        <a class="text-link card-link" href="{{ url_for('marine') }}">Learn More</a>
-    </article>
+    
+    <a href="{{ url_for('gut') }}" class="home-tile-wrapper">
+        <article class="card">
+            <h2>Gut Microbiota</h2>
+            <p>Complex communities that support digestion, metabolism, and immune function.</p>
+            <span class="text-link card-link">Learn More</span>
+        </article>
+    </a>
+
+    <a href="{{ url_for('plants') }}" class="home-tile-wrapper">
+        <article class="card">
+            <h2>Plant Partners</h2>
+            <p>Root-associated microbes help plants acquire nutrients and resist stress.</p>
+            <span class="text-link card-link" href="{{ url_for('plants') }}">Learn More</span>
+        </article>
+    </a>
+
+    <a href="{{ url_for('marine') }}" class="home-tile-wrapper">
+        <article class="card">
+            <h2>Marine Symbionts</h2>
+            <p>Microorganisms that fuel coral reefs and ocean food webs through nutrient exchange.</p>
+            <span class="text-link card-link" href="{{ url_for('marine') }}">Learn More</span>
+        </article>
+    </a>
+
 </section>
 {% endblock %}

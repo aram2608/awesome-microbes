@@ -10,20 +10,29 @@
 </section>
 
 <section class="card-grid" aria-label="Extremophile categories">
-    <article class="card">
-        <h2>Thermophiles</h2>
-        <p>Heat-loving organisms found in hot springs and hydrothermal vents.</p>
-        <a class="text-link card-link" href="{{ url_for('thermophiles') }}">Learn More</a>
-    </article>
-    <article class="card">
-        <h2>Halophiles</h2>
-        <p>Salt-adapted microbes that survive in hypersaline lakes and flats.</p>
-        <a class="text-link card-link" href="{{ url_for('halophiles') }}">Learn More</a>
-    </article>
+    <a class="home-tile-wrapper" href="{{ url_for('thermophiles') }}">
+        <article class="card">
+            <h2>Thermophiles</h2>
+            <p>Heat-loving organisms found in hot springs and hydrothermal vents.</p>
+            <span class="text-link card-link" href="{{ url_for('thermophiles') }}">Learn More</span>
+        </article>
+    </a>
+
+    <a class="home-tile-wrapper" href="{{ url_for('halophiles') }}">
+        <article class="card">
+            <h2>Halophiles</h2>
+            <p>Salt-adapted microbes that survive in hypersaline lakes and flats.</p>
+            <span class="text-link card-link">Learn More</span>
+        </article>
+    </a>
+
+    <a class="home-tile-wrapper" href="{{ url_for('snottites') }}">
     <article class="card">
         <h2>Snottites</h2>
         <p>A unique form of acidophilic bacteria that form acidic biofilms.</p>
-        <a class="text-link card-link" href="{{ url_for('snottites') }}">Learn More</a>
+        <span class="text-link card-link">Learn More</span>
     </article>
+    </a>
+
 </section>
 {% endblock %}

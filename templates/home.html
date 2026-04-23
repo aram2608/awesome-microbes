@@ -13,25 +13,32 @@
 </section>
 
 <section class="home-tiles" aria-label="Microbe categories">
-    <article class="home-tile">
-        <span class="home-tile-num" aria-hidden="true">01</span>
-        <h2 class="home-tile-title">Extremophiles</h2>
-        <p class="home-tile-desc">Specialists that thrive in heat, salt, and acid.</p>
-        <a class="home-tile-link" href="{{ url_for('extremophiles') }}">Discover extremophiles →</a>
-    </article>
+    <a href="{{ url_for('extremophiles') }}" class="home-tile-wrapper">
+        <article class="home-tile">
+            <span class="home-tile-num" aria-hidden="true">01</span>
+            <h2 class="home-tile-title">Extremophiles</h2>
+            <p class="home-tile-desc">Specialists that thrive in heat, salt, and acid, a particulary hardy bunch of microbes.</p>
+            <span class="home-tile-link">Discover extremophiles →</span>
+        </article>
+    </a>
 
-    <article class="home-tile">
-        <span class="home-tile-num" aria-hidden="true">02</span>
-        <h2 class="home-tile-title">Symbionts</h2>
-        <p class="home-tile-desc">Biological partnerships that support hosts, ecosystems, and the nutrient cycles that sustain the planet.</p>
-        <a class="home-tile-link" href="{{ url_for('symbionts') }}">Explore symbiotic interactions →</a>
-    </article>
+    <a href="{{ url_for('symbionts') }}" class="home-tile-wrapper">
+        <article class="home-tile">
+            <span class="home-tile-num" aria-hidden="true">02</span>
+            <h2 class="home-tile-title">Symbionts</h2>
+            <p class="home-tile-desc">Biological partnerships that support hosts, ecosystems, and the nutrient cycles that sustain the planet.</p>
+            <span class="home-tile-link">Explore symbiotic interactions →</span>
+        </article>
+    </a>
 
-    <article class="home-tile">
-        <span class="home-tile-num" aria-hidden="true">03</span>
-        <h2 class="home-tile-title">Parasites</h2>
-        <p class="home-tile-desc">Organisms that exploit hosts while shaping disease, immunity, and the course of evolution itself.</p>
-        <a class="home-tile-link" href="{{ url_for('parasites') }}">Study parasitic microbes →</a>
-    </article>
+    <a href="{{ url_for('parasites') }}" class="home-tile-wrapper">
+        <article class="home-tile">
+            <span class="home-tile-num" aria-hidden="true">03</span>
+            <h2 class="home-tile-title">Parasites</h2>
+            <p class="home-tile-desc">Organisms that exploit hosts while shaping disease, immunity, and the course of evolution itself.</p>
+            <span class="home-tile-link">Study parasitic microbes →</span>
+        </article>
+    </a>
+
 </section>
 {% endblock %}

@@ -310,7 +310,7 @@ const allQuestions = [
     q: "Which enzyme from <i>Pyrococcus furiosus</i> is widely used in PCR because of its high fidelity?",
     options: ["Taq polymerase", "Pfu DNA polymerase", "RNA polymerase II", "Reverse transcriptase"],
     answer: 1,
-    explain: "<i>Pyrococcus furiosus</i> produces Pfu DNA polymerase, a heat-stable enzyme that makes fewer copying errors than the more common Taq polymerase, making it valuable for high-accuracy PCR applications."
+    explain: "<i>Pyrococcus furiosus</i> produces Pfu DNA polymerase, a heat-stable enzyme, that has higher accuracy than the other common enzyme, Taq."
   },
   {
     category: "extremophiles",
@@ -322,11 +322,11 @@ const allQuestions = [
       "They produce a detectable toxin that indicates heat exposure."
     ],
     answer: 2,
-    explain: "Because <i>G. stearothermophilus</i> spores are among the most heat-resistant biological entities known, a sterilization method that kills them is considered effective. This makes them a reliable worst-case benchmark."
+    explain: "Because <i>G. stearothermophilus</i> spores are among the most heat-resistant biological entities known, a sterilization method that kills them is considered effective."
   },
   {
     category: "extremophiles",
-    q: "Halophiles are found in hypersaline environments. What distinguishes extreme halophiles like <i>Halobacterium salinarum</i> from halotolerant organisms?",
+    q: "Halophiles are found in hypersaline environments. What distinguishes extreme <strong>halophiles</strong> like <i>Halobacterium salinarum</i> from <strong>halotolerant</strong> organisms?",
     options: [
       "Halotolerant organisms die in fresh water; extreme halophiles can survive it.",
       "Extreme halophiles require high salt concentrations to grow, while halotolerant organisms merely survive them.",
@@ -338,7 +338,7 @@ const allQuestions = [
   },
   {
     category: "extremophiles",
-    q: "Snottites are cave biofilms primarily composed of which type of microorganism?",
+    q: "Snottites are cave biofilms that can be composed of which type of microorganism?",
     options: [
       "Methanogenic archaea",
       "Sulfur-oxidizing bacteria such as <i>Acidithiobacillus</i>",
@@ -350,7 +350,7 @@ const allQuestions = [
   },
   {
     category: "symbionts",
-    q: "<i>Bacteroides thetaiotaomicron</i> is a key member of the human gut microbiome. What is its primary metabolic contribution to the host?",
+    q: "<i>Bacteroides thetaiotaomicron</i> is a key member of the human gut microbiome. What is one of its metabolic contributions to the host?",
     options: [
       "Synthesizing vitamin B12 for host absorption",
       "Breaking down complex dietary polysaccharides the host cannot digest",
@@ -358,30 +358,30 @@ const allQuestions = [
       "Preventing colonization by pathogens through antibiotic secretion"
     ],
     answer: 1,
-    explain: "<i>B. thetaiotaomicron</i> encodes an unusually large repertoire of polysaccharide utilization loci (PULs) that let it degrade diverse plant fibers, yielding short-chain fatty acids the host uses as an energy source."
+    explain: "<i>B. thetaiotaomicron</i> help to degrade diverse plant fibers."
   },
   {
     category: "symbionts",
     q: "In the mutualistic symbiosis between legumes and <i>Rhizobium</i> bacteria, what does the plant provide in exchange for fixed nitrogen?",
     options: [
       "Oxygen from photosynthesis to power nitrogenase",
-      "Carbon compounds (photosynthate) as an energy source for the bacteria",
+      "Carbon compounds as an energy source for the bacteria",
       "Phosphate solubilized from soil minerals",
       "Protective antimicrobial peptides that shield the nodule from competing microbes"
     ],
     answer: 1,
-    explain: "Inside root nodules, <i>Rhizobium</i> converts atmospheric N₂ to ammonia for the plant. In return, the plant supplies fixed carbon (mainly as malate) to power the energetically costly nitrogenase reaction."
+    explain: "Inside root nodules, <i>Rhizobium</i> converts atmospheric N₂ to ammonia for the plant. In return, the plant supplies fixed carbon to power the energetically costly nitrogenase reaction."
   },
   {
     category: "symbionts",
     q: "Coral bleaching is caused when corals expel their symbiotic algae. What are these algae called?",
-    options: ["Cyanobacteria", "Zooxanthellae (Symbiodiniaceae)", "Chlorella", "Spirulina"],
+    options: ["Cyanobacteria", "Symbiodiniaceae", "Chlorella", "Spirulina"],
     answer: 1,
-    explain: "Corals host dinoflagellate algae called zooxanthellae (now classified in family Symbiodiniaceae) within their tissues. Heat or other stress causes the coral to expel them, losing up to 90% of its energy supply and turning white, a process known as bleaching."
+    explain: "Corals host dinoflagellate algae (Symbiodiniaceae) within their tissues. Heat or other stress causes the coral to expel them."
   },
   {
     category: "parasites",
-    q: "The Red Queen hypothesis, as applied to host–parasite interactions, predicts that:",
+    q: "The Red Queen hypothesis, as applied to host-parasite interactions, predicts that:",
     options: [
       "Parasites eventually evolve to become mutualists over geological time.",
       "Hosts and parasites engage in continuous coevolutionary arms races, with each side evolving new adaptations in response to the other.",
@@ -389,7 +389,7 @@ const allQuestions = [
       "Parasites always out-evolve hosts because of shorter generation times."
     ],
     answer: 1,
-    explain: "The Red Queen hypothesis holds that hosts must constantly evolve new defenses (including, some argue, the genetic diversity generated by sex) just to stay even with rapidly adapting parasites."
+    explain: "The Red Queen hypothesis holds that hosts must constantly evolve new defenses to stay even with rapidly adapting parasites."
   },
   {
     category: "parasites",
@@ -544,10 +544,10 @@ function nextQ() { current++; render(); }
 function renderResults(area) {
   const pct = Math.round((score / activeQuestions.length) * 100);
   const verdicts = [
-    [90, "Outstanding. You know your microbes inside and out."],
-    [70, "Solid grasp of the material. A few details are worth revisiting."],
-    [50, "You have the broad picture, but some specifics slipped by."],
-    [0,  "Worth another pass through the content."]
+    [90, "Outstanding. I have a feeling you are a true microbiologist."],
+    [70, "Solid grasp on microbial fun facts."],
+    [50, "You have the broad picture it seems."],
+    [0,  "It may be worth it to just use AI next time."]
   ];
   const verdict = verdicts.find(([min]) => pct >= min)[1];
 
